@@ -1,0 +1,26 @@
+{
+  "name": "animal-namer-api",
+  "version": "0.0.1",
+  "description": "animal-namer API", 
+  "dependencies": {
+    "animal-namer": "^1.0.0",
+    "body-parser": "^1.10.0",
+    "express": "^4.10.4"
+  }, 
+  "contributors": [
+    {
+      "name": "Nicole Whitehead",
+      "email": "ncwhitehead@gmail.com", 
+      "url": "http://ncwhitehead.com/"
+    },
+    {
+      "name": "David Johnson",
+      "email": "dhjohn0@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+}
