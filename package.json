@@ -19,9 +19,8 @@
       "email": "dhjohn0@gmail.com"
     }
   ],
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/ncwhitehead/animal-namer-api.git"
-  },
+  }
 }
