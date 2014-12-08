@@ -22,6 +22,12 @@ router.get('/getAnimal', function(req, res) {
 		}); 
 });
 
+router.get('/adj', function(req, res) {
+	namer.adj().then(function (adjective) {
+			res.json({ adjective : adjective });	
+		}); 
+});
+
 router.get('/adj/:letter', function(req, res) {
 	namer.adj(req.params.letter).then(function (adjective) {
 			res.json({ adjective : adjective });	
