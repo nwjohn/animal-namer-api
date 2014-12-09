@@ -9,6 +9,8 @@ Implementation of an API for the [animal-namer](https://github.com/notduncansmit
 * [express](https://www.npmjs.org/package/express)
 
 #Methods
+Visit the API at [Whimsical Wordimal](http://www.whimsicalwordimal.com/) or deploy to your own box. Simply append the below to the url to access the REST API or just spend time clicking the 'Generate Name' button. 
+
 ```
 /api/name
 ```
