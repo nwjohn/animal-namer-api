@@ -8,6 +8,37 @@ Implementation of an API for the [animal-namer](https://github.com/notduncansmit
 * [body-parser](https://www.npmjs.org/package/body-parser)
 * [express](https://www.npmjs.org/package/express)
 
+#Methods
+```
+/api/name
+```
+GETs a random alliterative adjective animal name
+
+```
+/api/name/{letter}
+```
+GETs a random alliterative adject animal name beginning with the supplied letter parameter
+
+```
+/api/animal
+```
+GETs a random animal name
+
+```
+/api/animal/{letter}
+```
+GETs a random animal name beginning with the supplied letter parameter
+
+```
+/api/adj
+```
+GETs a random adjective
+
+```
+/api/adj/{letter}
+```
+GETs a random adjective beginning with the supplied letter parameter
+
 #Contributors
 * [Nicole Whitehead](https://github.com/ncwhitehead)
 * [David Johnson](https://github.com/dhjohn0)
