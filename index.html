@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Whimsical Wordimal</title>
+    <!-- Custom styles for this template -->
+    <link href="assets/css/jumbotron-narrow.css" type="text/css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>Whimsical Wordimal</h1>
+        <p class="lead">A simple site for generating an Ubuntu style adjective animal name pairing. Click below to try.</p>
+        
+        <p><a class="btn btn-lg btn-success" href="#" id="generateName" role="button">Generate Name</a></p>
+        <h1 id="newName"></h1>
+      </div>
+
+      <footer class="footer">
+        <p>© <a href="https://github.com/ncwhitehead" alt="Nicole Whitehead's github">Nicole Whitehead, 2014</a></p>
+        <p>MIT licensed</p>
+      </footer>
+
+    </div>
+    <script type="text/javascript">
+      $( "#generateName" ).click(function() {
+        var nextName = $.ajax({
+          'url' : '/api/name', 
+          'success' : function (data) {
+            console.log(data); 
+            $("#newName").text(data.name);
+          }
+        }); 
+      });
+    </script>
+</body></html>

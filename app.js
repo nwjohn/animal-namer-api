@@ -7,15 +7,24 @@ var bodyParser  = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+var siteRouter = express.Router();
+
+app.use(siteRouter);
+
 app.all('*', function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next();
 });
 
+siteRouter.get('/', function (req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
+
 namer.loadSync();
 
 var port = process.env.PORT || 8080;
+var siteRouter = express.Router(); 
 var router = express.Router(); 
 
 router.get('/name', function(req, res) {
@@ -58,6 +67,7 @@ router.get('/', function(req, res) {
 	res.json({ about : "animal-namer API", version: "1.0" });	
 });
 
+app.use('/assets', express.static(__dirname + '/assets'));
 app.use('/api', router);
 
 app.listen(port);
