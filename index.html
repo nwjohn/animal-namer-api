@@ -45,6 +45,7 @@
       $( "#generateName" ).click(function() {
         var nextName = $.ajax({
           'url' : '/api/name', 
+          'cache': false, 
           'success' : function (data) {
             console.log(data); 
             $("#newName").text(data.name);
