@@ -24,47 +24,47 @@ siteRouter.get('/', function (req, res) {
 namer.loadSync();
 
 var port = process.env.PORT || 8080;
-var siteRouter = express.Router(); 
-var router = express.Router(); 
+var siteRouter = express.Router();
+var router = express.Router();
 
 router.get('/name', function(req, res) {
 	namer.name().then(function (name) {
-		res.json({ name : name });	
+		res.json({ name : name });
 	}); 
 });
 
 router.get('/name/:letter', function(req, res) {
 	namer.name(req.params.letter).then(function (name) {
-		res.json({ name : name });	
+		res.json({ name : name });
 	}); 
 });
 
 router.get('/animal', function(req, res) {
 	namer.animal().then(function (animal) {
-		res.json({ animal : animal });	
+		res.json({ animal : animal });
 	}); 
 });
 
 router.get('/animal/:letter', function(req, res) {
 	namer.animal(req.params.letter).then(function (animal) {
-		res.json({ animal : animal });	
+		res.json({ animal : animal });
 	}); 
 });
 
 router.get('/adj', function(req, res) {
 	namer.adj().then(function (adjective) {
-		res.json({ adjective : adjective });	
+		res.json({ adjective : adjective });
 	}); 
 });
 
 router.get('/adj/:letter', function(req, res) {
 	namer.adj(req.params.letter).then(function (adjective) {
-		res.json({ adjective : adjective });	
+		res.json({ adjective : adjective });
 	}); 
 });
 
 router.get('/', function(req, res) {
-	res.json({ about : "animal-namer API", version: "1.0" });	
+	res.json({ about : "animal-namer API", version: "1.0" });
 });
 
 app.use('/assets', express.static(__dirname + '/assets'));
